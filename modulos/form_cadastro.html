@@ -3,53 +3,56 @@
         <div class='alert alert-secondary'>
             <b>Formulário de Cadastro</b>
             <hr>
-            <label for="nome">Nome</label>
-            <input type="text" id="nome" name="nome" class='form-control'>
+            <form id="form_cadastro">
+                <label for="nome">Nome</label>
+                <input type="text" id="nome" name="nome" class='form-control'>
 
-            <label for="email">E-mail</label>
-            <input type="text" id="email" name="email" class='form-control'>
+                <label for="email">E-mail</label>
+                <input type="text" id="email" name="email" class='form-control'>
 
-            <label for="cpf">CPF</label>
-            <input type="text" id="cpf" name="cpf" class='form-control'>
+                <label for="cpf">CPF</label>
+                <input type="text" id="cpf" name="cpf" class='form-control'>
 
-            <label for="telefone">Telefone</label>
-            <input type="text" id="telefone" name="telefone" class='form-control'>
+                <label for="telefone">Telefone</label>
+                <input type="text" id="telefone" name="telefone" class='form-control'>
 
-            <label for="data_nasc">Data Nascimento</label>
-            <input type="date" id="data_nasc" name="data_nasc" class='form-control'>
+                <label for="data_nasc">Data Nascimento</label>
+                <input type="date" id="data_nasc" name="data_nasc" class='form-control'>
 
-            <label for="data_cad">Data Cadastro</label>
-            <input type="date" id="data_cad" name="data_cad" class='form-control'>
+                <label for="data_cad">Data Cadastro</label>
+                <input type="date" id="data_cad" name="data_cad" class='form-control'>
 
-            <label for="intervalo">Intervalo</label>
-            <select id="intervalo" name="intervalo" class='form-control'>
-                <option value="Único">Único</opiton>
-                <option value="Bimestral">Bimestral</opiton>
-                <option value="Semestral">Semestral</opiton>
-                <option value="Anual">Anual</opiton>
-            </select>
+                <label for="intervalo">Intervalo</label>
+                <select id="intervalo" name="intervalo" class='form-control'>
+                    <option value="Único">Único</opiton>
+                    <option value="Bimestral">Bimestral</opiton>
+                    <option value="Semestral">Semestral</opiton>
+                    <option value="Anual">Anual</opiton>
+                </select>
 
-            <label for="valor">Valor</label>
-            <input type="number" id="valor" name="valor" class='form-control'>
-            
-            <label for="forma_pag">Forma Pagamento </label><br>
-            <input type="radio" id="debito" name="forma_pag" value='debito' onclick="form_conta()"> Débito
-            <input type="radio" id="credito" name="forma_pag" value='credito' onclick="form_cartao()" class="ml-3"> Crédito
+                <label for="valor">Valor</label>
+                <input type="number" id="valor" name="valor" class='form-control'>
+                
+                <label for="forma_pag">Forma Pagamento </label><br>
+                <input type="radio" id="debito" name="forma_pag" value='debito' onclick="form_conta()"> Débito
+                <input type="radio" id="credito" name="forma_pag" value='credito' onclick="form_cartao()" class="ml-3"> Crédito <br>
 
-            <label for="cep">CEP</label>
-            <input type="text" id="cep" name="cep" class='form-control' onblur="busca_cep()">
-            <label for="endereco">Logradouro</label>
-            <input type="text" id="endereco" name="endereco" class='form-control'>
-            <label for="numero">Número</label>
-            <input type="text" id="numero" name="numero" class='form-control'>
-            <label for="complemento">Complemento</label>
-            <input type="text" id="complemento" name="complemento" class='form-control'>
-            <label for="bairro">Bairro</label>
-            <input type="text" id="bairro" name="bairro" class='form-control'>
-            <label for="cidade">Cidade</label>
-            <input type="text" id="cidade" name="cidade" class='form-control'>
-            <label for="estado">Estado</label>
-            <input type="text" id="estado" name="estado" class='form-control'>
+                <label for="cep">CEP</label>
+                <input type="text" id="cep" name="cep" class='form-control' onblur="busca_cep()">
+                <label for="endereco">Logradouro</label>
+                <input type="text" id="endereco" name="endereco" class='form-control'>
+                <label for="numero">Número</label>
+                <input type="text" id="numero" name="numero" class='form-control'>
+                <label for="complemento">Complemento</label>
+                <input type="text" id="complemento" name="complemento" class='form-control'>
+                <label for="bairro">Bairro</label>
+                <input type="text" id="bairro" name="bairro" class='form-control'>
+                <label for="cidade">Cidade</label>
+                <input type="text" id="cidade" name="cidade" class='form-control'>
+                <label for="estado">Estado</label>
+                <input type="text" id="estado" name="estado" class='form-control'>
+            </form>
+            <button class="btn btn-primary btn-block mt-2" onclick="grava_dados()"><i class="far fa-save"></i> Gravar</button>
         </div>
     </div>
     <div class='col-sm-6'>

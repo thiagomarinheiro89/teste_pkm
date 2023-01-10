@@ -5,8 +5,6 @@ $(document).ready(function(){
     $("#cartao").inputmask({"mask": "9999 9999 9999 9999"});
     $("#venc_cartao").inputmask({"mask": "99/99"});
     $("#cvv").inputmask({"mask": "999"});
-    
-    
 });
 
 function form_conta(){
@@ -17,4 +15,22 @@ function form_conta(){
 function form_cartao(){
     $("#dados_conta").addClass("d-none");
     $("#dados_cartao").removeClass("d-none");
+}
+
+async function grava_dados(){
+    body = $("#form_cadastro").serialize();
+    console.log(body);
+    $("#form_cadastro input,select").attr("disabled", true);
+
+    await $.post("control/cadastro.php", body,function(data){
+        retorno = JSON.parse(data);
+
+        if(!retorno['status']){
+            alert(retorno['msg']);
+            $("#form_cadastro input,select").attr("disabled", false);
+        } else {
+            alert(retorno['msg']);
+            modulo('form_cadastro.html');
+        }
+    })
 }

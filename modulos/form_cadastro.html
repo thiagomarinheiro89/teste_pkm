@@ -1,5 +1,5 @@
 <div class='row'>
-    <div class='col-sm-6'>
+    <div class='col-sm-4'>
         <div class='alert alert-secondary'>
             <b>Formulário de Cadastro</b>
             <hr>
@@ -84,8 +84,20 @@
             <button class="btn btn-primary btn-block mt-2" onclick="grava_dados()"><i class="far fa-save"></i> Gravar</button>
         </div>
     </div>
-    <div class='col-sm-6'>
-        tabela
+    <div class='col-sm-8'>
+        <table id="tb_doadores">
+            <thead>
+                <th>Nome</th>
+                <th>E-mail</th>
+                <th>Valor</th>
+                <th>Intervalo</th>
+                <th>Forma Pagamento</th>
+            </thead>
+            <tbody id="dados_doadores">
+
+            </tbody>
+
+        </table>
     </div>
 </div>
 <script src='js/form_cadastro.js'></script>

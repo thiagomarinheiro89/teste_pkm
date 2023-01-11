@@ -8,6 +8,8 @@
         valida_idade($_POST['data_nasc']);
         valida_dados_pagamento($_POST['forma_pag']);
         grava_banco($_POST);
+    } else {
+        lista_doadores();
     }
 
     function valida_campos($campos){
@@ -201,5 +203,12 @@
             retorno(false, "Não foi possível cadastrar o doador, por favor tente novamente se o erro persistir entre em contato com a administração do sistema!");
         }
 
+    }
+
+    function lista_doadores(){
+        $sql = "SELECT d.nome, d.email, d.valor, d.intervalo, d.forma_pag  FROM doadores AS d";
+        $dados = get_dados($sql, array());
+
+        retorno(true, "ok", $dados);
     }
 ?>

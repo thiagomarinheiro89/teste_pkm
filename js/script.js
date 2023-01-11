@@ -31,3 +31,30 @@ async function busca_cep(){
         });        
     }
 }
+
+function tabela(tabela){
+    $('#'+tabela).DataTable({
+                              retrieve: true,
+                              paging: false,
+                              "bPaginate": true,
+                              "language": {
+                                          "lengthMenu": 'Mostrar <select>'+
+                                                                    '<option value="10">10</option>'+
+                                                                    '<option value="20">20</option>'+
+                                                                    '<option value="30">30</option>'+
+                                                                    '<option value="40">40</option>'+
+                                                                    '<option value="50">50</option>'+
+                                                                    '<option value="-1">Todos</option>'+
+                                                                  '</select>',
+                                            "search": "Filtrar _INPUT_ ",
+                                            "info": "Mostrando _START_ a _END_ de _TOTAL_" ,
+                                            "tabela_previous":"Anterior",
+                                            "paginate":{
+                                                        "next":"Próximo",
+                                                        "previous":"Anterior",
+                                                        "last":"Última",
+                                                        "first":"Primeira"
+                                                       }
+                                        }
+                              });  
+  }
